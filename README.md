@@ -17,7 +17,7 @@ This is a draft document. It may be periodically updated, replaced or removed by
 The did:bee method DID identifier has three required components and one optional component that are concatenated to make a did:bee specification conformant identifier. The components are:
 
 - DID: the hardcoded string `did`: to indicate the identifier is a DID
-- DID bee method: the hardcoded string `bee` or emoji 🐝 that indicates that the identifier uses this DID Method specification.
+- DID bee method: the hardcoded string `bee` or hex encoded 🐝 `1F41D` that indicates that the identifier uses this DID Method specification.
 - DID idstring: a v4 UUID that MUST be unique to the DID document itself
 - [OPTIONAL] envrionment: An `envrionment` string MAY be appended, and is used to differentiate differing domains or operational environments.  If an `environment` string is appened it MUST be a FQDN.  If the `envrionment` string is omitted, a default value of `bee.mesur.io` MUST be used by the controller.
 
@@ -28,7 +28,7 @@ The components are assembled as follows:
 examples of valid `bee` DIDs are:
 
 ```
-did:🐝:b54399c1-fbec-4aa8-807f-9b7ee057adb0                       # use of emoji
+did:1F41D:b54399c1-fbec-4aa8-807f-9b7ee057adb0                       # use of emoji
 did:bee:990aa5bb-eaa4-43cd-9f51-bcd4f6f2576a                      # default environment
 did:bee:990aa5bb-eaa4-43cd-9f51-bcd4f6f2576a:bee.mesur.io         # explicit use of default envrionment
 did:bee:e304a73f-c044-475b-860f-7d7b8e9dea4a:bee-test.mesur.io    # an explicit use of a test environment
